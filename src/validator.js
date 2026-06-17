@@ -18,11 +18,11 @@ const MAX_EMAIL_LENGTH = 254;
 const MAX_LOCAL_PART_LENGTH = 64;
 
 /**
- * 이메일 문자열이 RFC 5322 형식과 길이 제한을 만족하는지 검증한다.
+ * 이메일 문자열이 RFC 5322 형식과 RFC 3696 길이 제한을 만족하는지 검증한다.
  * @param {string} email - 검증할 이메일
  * @returns {boolean} 유효하면 true
  */
-function isValidEmail(email) {
+export function isValidEmail(email) {
   if (typeof email !== 'string') return false;
 
   const atIndex = email.lastIndexOf('@');
@@ -31,5 +31,3 @@ function isValidEmail(email) {
 
   return RFC5322_EMAIL_REGEX.test(email);
 }
-
-module.exports = { isValidEmail };

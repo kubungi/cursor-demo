@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [{ "command": "bash .cursor/hooks/audit.sh" }],
+    "beforeShellExecution": [
+      { "command": "bash .cursor/hooks/audit.sh" },
+      {
+        "command": "node .cursor/hooks/block-rm.mjs",
+        "matcher": "rm\\s+-rf",
+      "failClosed": true
+      }
+    ]
+  }
+}

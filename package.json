@@ -2,12 +2,13 @@
   "name": "cursor-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "node --test src/email.test.js"
+    "start": "node src/index.js",
+    "test": "node --test src/**/*.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module"
 }
